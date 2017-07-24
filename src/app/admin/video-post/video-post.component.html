@@ -1,0 +1,48 @@
+<div class="card-wrapper">
+  <div class="mdl-card preview mdl-shadow--2dp">
+    <div class="mdl-card__title">
+      <h4>{{post.title}}</h4>
+    </div>
+    <div class="mdl-card__media" [innerHtml]="post.previewLink">
+    </div>
+    <div class="mdl-card__supporting-text">
+      {{post.shortDesc}}
+    </div>
+    <div class="mdl-card__actions">
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+      Looks okay!!
+    </a>
+    </div>
+  </div>
+
+  <div class="demo-card-event mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+      <h4>
+        Add a video post
+      </h4>
+    </div>
+    <div class="mdl-card__supporting-text">
+      <form action="#">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <textarea class="mdl-textfield__input" [(ngModel)]="post.link" type="text" rows="5" id="link" name="link">
+        </textarea>
+          <label class="mdl-textfield__label" for="link">Link</label>
+          <span class="mdl-textfield__error">Invalid link!</span>
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" [(ngModel)]="post.tags" type="text" id="tag" name="tags">
+          <label class="mdl-textfield__label" for="tag">Tags(author, content type, audience)</label>
+          <span class="mdl-textfield__error">Add at least single tag</span>
+        </div>
+      </form>
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+      Save
+    </a>
+      <div class="mdl-layout-spacer"></div>
+      <i class="material-icons">event</i>
+    </div>
+  </div>
+</div>
